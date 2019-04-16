@@ -4,24 +4,25 @@
 
 Installing the AWS SAM CLI on Linux
 
-Install the AWS SAM CLI Using Linuxbrew
+## Install the AWS SAM CLI Using Linuxbrew
+
 Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
-To install the Linuxbrew package manager, follow the instructions on the Linuxbrew website.
+1. To install the Linuxbrew package manager, follow the instructions on the Linuxbrew webiste (http://linuxbrew.sh/).
 
-Upgrade Linuxbrew, and update it to the latest version.
+2. Upgrade Linuxbrew, and update it to the latest version.
+`brew upgrade`
+`brew update`
 
-brew upgrade
-brew update
-Add a brew tap from GitHub.
+3. Add a brew tap from GitHub (https://github.com/aws/homebrew-tap).
+`brew tap aws/tap`
 
-brew tap aws/tap
-Install aws-sam-cli from the brew tap.
+4. Install aws-sam-cli from the brew tap.
+`brew install aws-sam-cli`
 
-brew install aws-sam-cli
-Now sam is installed to the following location:
+  Now sam is installed to the following location:
 
-/home/linuxbrew/.linuxbrew/bin/sam
-You should be able to invoke sam from the command line.
+  `/home/linuxbrew/.linuxbrew/bin/sam`
+  You should be able to invoke sam from the command line.
 
 sam --version
