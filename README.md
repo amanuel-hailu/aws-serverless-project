@@ -19,48 +19,34 @@ Then Verify that the AWS CLI installed correctly by running:
 ### Configure the AWS CLI
 
 For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
+
+*Note: AWS Access Key ID and AWS Secret Access Key are provided to you when creating a user in AWS*
+
 ```
-AWS Access Key ID [None]: *Aws user access key id*
+AWS Access Key ID [None]:
 
-AWS Secret Access Key [None]: *Aws user sercret access key id*
+AWS Secret Access Key [None]:
 
-Default region name [None]: *region*
+Default region name [None]:
 
-Default output format [None]: *Example: "json" or "text"*
+Default output format [None]:
 ```
 
 ---
 
 
-### Install the AWS SAM CLI Using Linuxbrew
+### Install the AWS SAM CLI Using Pip
 
 Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
-1. To install the Linuxbrew package manager, follow the instructions on the Linuxbrew webiste (http://linuxbrew.sh/).
+1. Verify that the Python version is 2.7 or 3.6.
 
-2. Upgrade Linuxbrew, and update it to the latest version.
+  `python --version`
 
-  `brew upgrade`
-  `brew update`
+2. Verify that pip is installed.
 
-3. Add a brew tap from GitHub (https://github.com/aws/homebrew-tap).
+  `pip --version`
 
-  `brew tap aws/tap `
+3. Install aws-sam-cli.
 
-4. Install aws-sam-cli from the brew tap.
-
-  `brew install aws-sam-cli`
-
-  Now sam is installed to the following location:
-
-  `/home/linuxbrew/.linuxbrew/bin/sam`
-
-  You should be able to invoke sam from the command line.
-
-  `sam --version`
-
----
-
-
-
-  `$ pip3 install awscli --upgrade --user`
+  `pip install --user aws-sam-cli`
