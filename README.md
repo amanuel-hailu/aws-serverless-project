@@ -72,8 +72,38 @@ $ sudo yum remove docker \
 
 ##### Install Docker CE
 
+1. Install required packages
+
 ```
 sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
 ```
+
+2. Use the following command to set up the stable repository
+
+```
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+3. Install the latest version of Docker CE and containerd, or go to the next step to install a specific version
+
+```
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+
+4. Start Docker
+
+```
+sudo systemctl start docker
+```
+
+5. Verify that Docker CE is installed correctly by running:
+
+```
+sudo docker run hello-world
+```
+
+*Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
