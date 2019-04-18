@@ -20,10 +20,11 @@ Then Verify that the AWS CLI installed correctly by running:
 
 For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
 
-`AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
-Default output format [None]: json`
+`AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE`
+`AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`
+`Default region name [None]: us-west-2`
+`Default output format [None]: json`
+
 
 
 ### Install the AWS SAM CLI Using Linuxbrew
@@ -39,7 +40,7 @@ Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
 3. Add a brew tap from GitHub (https://github.com/aws/homebrew-tap).
 
-  `brew tap aws/tap`
+  `brew tap aws/tap `
 
 4. Install aws-sam-cli from the brew tap.
 
