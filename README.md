@@ -45,8 +45,35 @@ Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
 2. Verify that pip is installed.
 
-  `pip --version`
+* `pip --version`
 
 3. Install aws-sam-cli.
 
-  `pip install --user aws-sam-cli`
+* `pip install --user aws-sam-cli`
+
+
+---
+
+### Install Docker CE
+
+##### Uninstall old versions
+
+```
+$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+
+```
+
+##### Install Docker CE
+
+```
+sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+```
