@@ -41,7 +41,7 @@ Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
 1. Verify that the Python version is 2.7 or 3.6.
 
-  `python --version`
+* `python --version`
 
 2. Verify that pip is installed.
 
