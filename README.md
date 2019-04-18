@@ -21,8 +21,11 @@ Then Verify that the AWS CLI installed correctly by running:
 For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
 
 `AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE`
+
 `AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`
+
 `Default region name [None]: us-west-2`
+
 `Default output format [None]: json`
 
 
