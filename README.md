@@ -1,10 +1,32 @@
 # AWS Serverless Project
 
-# Installation
+## Installation
 
-Installing the AWS SAM CLI on Linux
+### Install the AWS CLI Using pip
 
-## Install the AWS SAM CLI Using Linuxbrew
+Prerequisites
+
+  - Python 2 version 2.6.5+ or Python 3 version 3.3+
+
+If you already have pip and a supported version of Python, you can install the AWS CLI by using the following command.
+
+`pip install awscli --upgrade --user`
+
+Then Verify that the AWS CLI installed correctly by running:
+
+`aws --version`
+
+### Configure the AWS CLI
+
+For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
+
+`AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json`
+
+
+### Install the AWS SAM CLI Using Linuxbrew
 
 Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
@@ -31,13 +53,8 @@ Follow these steps to install the AWS SAM CLI by using Linuxbrew:
 
   `sam --version`
 
-## Install the AWS CLI Using pip
+---
 
-Prerequisites
 
-  - Python 2 version 2.6.5+ or Python 3 version 3.3+
-  - Windows, Linux, macOS, or Unix
-
-If you already have pip and a supported version of Python, you can install the AWS CLI by using the following command. If you have Python version 3+ installed, we recommend that you use the pip3 command.
 
   `$ pip3 install awscli --upgrade --user`
