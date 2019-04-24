@@ -31,7 +31,9 @@ $ sam local generate-event s3 [put/delete] --bucket <bucket> --key <key> | sam l
 
 Option:
 
-\--help | Shows this message and exits.
+| Option                           | Description                                                                                                                                                                                                                                             |
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --help                      | Shows this message and exits.                                                                                                                                                                                     |
 
 **Commands:**
 
@@ -74,3 +76,5 @@ Option:
 *   sqs
 
 *   stepfunctions
+
+Additional Resources: [AWS SAM CLI Command Reference](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html)
