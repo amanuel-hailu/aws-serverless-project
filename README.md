@@ -1,4 +1,4 @@
-# AWS Serverless Project
+<center># AWS Serverless Project</center>
 
 ## Installation
 
@@ -107,3 +107,37 @@ sudo docker run hello-world
 ```
 
 *Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
+
+### Post-Installation
+
+##### Manage Docker as a non-root user
+
+1. Create `docker` group
+
+```
+sudo groupadd docker
+```
+
+2. Add your user to the `docker` group
+
+```
+sudo usermod -aG docker $USER
+```
+
+3. Log out and log back in so that your group membership is re-evaluated
+
+4. Verify that you can run docker commands without `sudo`
+
+```
+docker run hello-world
+```
+
+*Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
+
+##### Configure Docker to start on boot
+
+You can configure docker to start on boot with the following command:
+
+```
+sudo systemctl enable docker
+```
