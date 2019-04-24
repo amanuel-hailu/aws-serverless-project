@@ -1,4 +1,4 @@
-<center># AWS Serverless Project</center>
+-> # AWS Serverless Project <-
 
 ## Installation
 
