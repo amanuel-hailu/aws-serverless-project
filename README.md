@@ -108,7 +108,7 @@ sudo docker run hello-world
 
 *Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
 
-### Post-Installation
+### Docker Post-Installation
 
 ##### Manage Docker as a non-root user
 
