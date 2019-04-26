@@ -2,11 +2,33 @@ AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Description: AWS SAM Tutorial
 Resources:
+  HelloAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Sub ${Environment}
+      DefinitionBody:
+        swagger: "2.0"
+        info:
+          version: "1.0"
+          title: "sam-demo-dev"
+        host: "qlhu0fggk8.execute-api.us-east-1.amazonaws.com"
+        basePath: "/Prod"
+        schemes:
+        - "https"
+        paths:
+          /test:
+            get:
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:455530306296:function:HelloLambdaDemo/invocations"
+                passthroughBehavior: "when_no_match"
+                httpMethod: "POST"
+                type: "aws_proxy"
   HelloLambda:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: HelloLambdaDemo
-      Handler: index.lambda_handler
+      Handler: HelloLambda.lambda_handler
       Runtime: python2.7
       CodeUri: src
       MemorySize: 128
@@ -19,3 +41,14 @@ Resources:
           Properties:
             Path: /test
             Method: get
+  InvokeLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: InvokeLambdaDemo
+      Handler: InvokeLambda.lambda_handler
+      Runtime: python2.7
+      CodeUri: src
+      MemorySize: 128
+      Timeout: 30
+      Policies:
+        - Testing
