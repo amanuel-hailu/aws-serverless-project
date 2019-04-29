@@ -43,7 +43,7 @@ sudo systemctl status docker
 
 5. Executing Docker Command Without Sudo (Optional)
 
-a. If you want to avoid typing sudo whenever you run the docker command, add your username to the docker group:
+  - If you want to avoid typing sudo whenever you run the docker command, add your username to the docker group:
 
 ```
 sudo usermod -aG docker $(whoami)
