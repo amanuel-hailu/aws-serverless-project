@@ -2,11 +2,11 @@
 
 # dev:   ./deploy.sh
 # prod:  ./deploy.sh prod
-STAGE=${1:-dev}
-PROJECT=sam-demo-$STAGE
+# STAGE=${1:-dev}
+PROJECT=sam-demo$STAGE
 
 # Change the suffix on the bucket to something unique!
-BUCKET=$PROJECT-testing
+BUCKET=$PROJECT-testing-stack
 
 # make a build directory to store artifacts
 rm -rf build

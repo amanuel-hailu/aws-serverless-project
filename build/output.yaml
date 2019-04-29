@@ -8,7 +8,7 @@ Resources:
       FunctionName: HelloLambda
       Handler: HelloLambda.lambda_handler
       Runtime: python2.7
-      CodeUri: s3://sam-demo-testing-stack/183fb55bcdc9f5daf0b410f647757397
+      CodeUri: s3://sam-demo-testing-stack/8d5bf69354c91b50582ac5ccb02b6c95
       MemorySize: 128
       Timeout: 30
       Policies:
@@ -25,11 +25,11 @@ Resources:
       FunctionName: InvokeLambda
       Handler: InvokeLambda.lambda_handler
       Runtime: python2.7
-      CodeUri: s3://sam-demo-testing-stack/183fb55bcdc9f5daf0b410f647757397
+      CodeUri: s3://sam-demo-testing-stack/8d5bf69354c91b50582ac5ccb02b6c95
       MemorySize: 128
       Timeout: 30
       Policies:
-      - AWSLambdaFullAccess
+      - AWSLambdaBasicExecutionRole
       Events:
         MyEndpoint:
           Type: Api

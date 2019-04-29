@@ -1,56 +1,4 @@
-## Installation
-
-### Install the AWS CLI Using pip
-
-Prerequisites
-
-  - Python 2 version 2.6.5+ or Python 3 version 3.3+
-
-If you already have pip and a supported version of Python, you can install the AWS CLI by using the following command.
-
-`pip install awscli --upgrade --user`
-
-Then Verify that the AWS CLI installed correctly by running:
-
-`aws --version`
-
-### Configure the AWS CLI
-
-For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
-
-*Note: AWS Access Key ID and AWS Secret Access Key are provided to you when creating a user in AWS*
-
-```
-AWS Access Key ID [None]:
-
-AWS Secret Access Key [None]:
-
-Default region name [None]:
-
-Default output format [None]:
-```
-
----
-
-
-### Install the AWS SAM CLI Using Pip
-
-Follow these steps to install the AWS SAM CLI by using Linuxbrew:
-
-1. Verify that the Python version is 2.7 or 3.6.
-
-* `python --version`
-
-2. Verify that pip is installed.
-
-* `pip --version`
-
-3. Install aws-sam-cli.
-
-* `pip install --user aws-sam-cli`
-
-
----
+# Installation
 
 ### Install Docker CE
 
@@ -70,61 +18,40 @@ $ sudo yum remove docker \
 
 ##### Install Docker CE
 
-1. Install required packages
+1. First, let's update the package database:
 
 ```
-sudo yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
+sudo yum check-update
 ```
 
-2. Use the following command to set up the stable repository
+2. Now run this command. It will add the official Docker repository, download the latest version of Docker, and install it:
 
 ```
-sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+curl -fsSL https://get.docker.com/ | sh
 ```
 
-3. Install the latest version of Docker CE and containerd, or go to the next step to install a specific version
-
-```
-sudo yum install docker-ce docker-ce-cli containerd.io
-```
-
-4. Start Docker
+3. Start Docker
 
 ```
 sudo systemctl start docker
 ```
-
-5. Verify that Docker CE is installed correctly by running:
-
-```
-sudo docker run hello-world
-```
-
-*Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
-
-### Docker Post-Installation
-
-##### Manage Docker as a non-root user
-
-1. Create `docker` group
+4. Verify that it's running:
 
 ```
-sudo groupadd docker
+sudo systemctl status docker
 ```
 
-2. Add your user to the `docker` group
+5. Executing Docker Command Without Sudo (Optional)
+
+a. If you want to avoid typing sudo whenever you run the docker command, add your username to the docker group:
 
 ```
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $(whoami)
 ```
 
-3. Log out and log back in so that your group membership is re-evaluated
+*Note: You will need to log out of the Droplet and back in as the same user to enable this change*
 
-4. Verify that you can run docker commands without `sudo`
+6. To check whether you can access and download images from Docker Hub, type:
 
 ```
 docker run hello-world
@@ -132,7 +59,7 @@ docker run hello-world
 
 *Note: This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits*
 
-##### Configure Docker to start on boot
+7. Configure Docker to start on boot
 
 You can configure docker to start on boot with the following command:
 
@@ -140,4 +67,64 @@ You can configure docker to start on boot with the following command:
 sudo systemctl enable docker
 ```
 
+---
+
+### Install the AWS CLI Using pip
+
+Prerequisites
+
+  - Python 2 version 2.6.5+ or Python 3 version 3.3+
+
+If you already have pip and a supported version of Python, you can install the AWS CLI by using the following command.
+
+`pip install awscli --upgrade --user`
+
+Then Verify that the AWS CLI installed correctly by running:
+
+`aws --version`
+
+Additional Resources: [Installing pip and AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html)
+
+### Configure the AWS CLI
+
+For general use, the aws configure command is the fastest way to set up your AWS CLI installation.
+
+*Note: AWS Access Key ID and AWS Secret Access Key are provided to you when creating a user in AWS*
+
+```
+AWS Access Key ID [None]:
+
+AWS Secret Access Key [None]:
+
+Default region name [None]:
+
+Default output format [None]:
+```
+
+---
+
+### Install the AWS SAM CLI Using Using Linuxbrew
+
+Follow these steps to install the AWS SAM CLI by using Linuxbrew:
+
+1. To install the Linuxbrew package manager, follow the instructions on the [Linuxbrew website](https://docs.brew.sh/Homebrew-on-Linux).
+
+
+2. Upgrade Linuxbrew, and update it to the latest version
+
+```
+brew upgrade
+brew update
+```
+
+3. Add a brew tap from GitHub
+
+`brew tap aws/tap`
+
+4. Install aws-sam-cli from the brew tap.
+
+`brew install aws-sam-cli`
+
 Additional Resources: [Installing the AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+
+---
