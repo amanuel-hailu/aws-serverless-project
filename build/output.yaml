@@ -5,10 +5,10 @@ Resources:
   HelloLambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: HelloLambdaDemo
-      Handler: index.lambda_handler
+      FunctionName: HelloLambda
+      Handler: HelloLambda.lambda_handler
       Runtime: python2.7
-      CodeUri: s3://sam-demo-dev-aman/e192fe4c20e604efe8fb39429dc458e8
+      CodeUri: s3://sam-demo-testing-stack/183fb55bcdc9f5daf0b410f647757397
       MemorySize: 128
       Timeout: 30
       Policies:
@@ -17,5 +17,22 @@ Resources:
         MyEndpoint:
           Type: Api
           Properties:
-            Path: /test
+            Path: /hello
+            Method: get
+  InvokeLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: InvokeLambda
+      Handler: InvokeLambda.lambda_handler
+      Runtime: python2.7
+      CodeUri: s3://sam-demo-testing-stack/183fb55bcdc9f5daf0b410f647757397
+      MemorySize: 128
+      Timeout: 30
+      Policies:
+      - AWSLambdaFullAccess
+      Events:
+        MyEndpoint:
+          Type: Api
+          Properties:
+            Path: /invoke
             Method: get
