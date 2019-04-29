@@ -83,7 +83,7 @@ Then Verify that the AWS CLI installed correctly by running:
 
 `aws --version`
 
-Additional Resources: [Installing pip and AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html)
+*Additional Resources: [Installing pip and AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html)*
 
 ### Configure the AWS CLI
 
@@ -125,6 +125,6 @@ brew update
 
 `brew install aws-sam-cli`
 
-Additional Resources: [Installing the AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+*Additional Resources: [Installing the AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)*
 
 ---
