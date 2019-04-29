@@ -8,7 +8,7 @@ The goal of this exercise is to learn how to write a very simple Lambda, test it
 
 ### Step one
 
-Install the necessary software needed for this demonstration [Installation](../Installation/README.md)  
+Install the necessary software needed for this demonstration [Installation](/Installation/README.md)  
 
 ### Command to delete stack
 
