@@ -1,14 +1,14 @@
-# Demo
+# AWS SAM Demo
 
-### The below command allows you to run your serverless application locally for quick development and testing. When you run this command in a directory that contains your serverless functions and your AWS SAM template, it creates a local HTTP server that hosts all of your functions.
+This example implements a very simple Hello World API using AWS Lambda and AWS API Gateway
 
-sam local start-api
+## Goal
 
+The goal of this exercise is to learn how to write a very simple Lambda, test it locally and deploy it on AWS
 
-### The below command invokes the function with an empty event.
+### Step one
 
-sam local invoke --no-event HelloLambda
-
+Install the necessary software needed for this demonstration [Installation](../Installation/README.md)  
 
 ### Command to delete stack
 
