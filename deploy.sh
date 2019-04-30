@@ -25,5 +25,5 @@ sam package                   \
 sam deploy                     \
     --template-file build/output.yaml         \
     --stack-name $PROJECT                     \
-    --capabilities CAPABILITY_IAM             \
-    --parameter-overrides Environment=$STAGE
+    --capabilities CAPABILITY_IAM             
+    
