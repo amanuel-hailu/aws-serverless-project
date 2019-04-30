@@ -2,8 +2,8 @@
 
 # dev:   ./deploy.sh
 # prod:  ./deploy.sh prod
-# STAGE=${1:-dev}
-PROJECT=sam-demo$STAGE
+STAGE=${1:-dev}
+PROJECT=sam-demo-$STAGE
 
 # Change the suffix on the bucket to something unique!
 BUCKET=$PROJECT-testing-stack
@@ -25,5 +25,5 @@ sam package                   \
 sam deploy                     \
     --template-file build/output.yaml         \
     --stack-name $PROJECT                     \
-    --capabilities CAPABILITY_IAM             \
-    --parameter-overrides Environment=$STAGE
+    --capabilities CAPABILITY_IAM             
+    
